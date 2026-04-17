@@ -24,9 +24,9 @@ GO
 ---This is often necessary because a database cannot be dropped while other users are connected to it.
 --DROP DATABASE DataWarehouse; Permanently deletes the DataWarehouse database and all of its data.
 --So overall, the script means:
-Check if DataWarehouse exists.
-Force everyone out of it.
-Delete it safely.
+--Check if DataWarehouse exists.
+--Force everyone out of it.
+--Delete it safely.
 ==========================================================================
 IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'DataWarehouse')
 BEGIN
