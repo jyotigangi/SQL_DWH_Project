@@ -15,6 +15,7 @@ WARNING:
 
 USE master;
 GO
+/*	
 =============================================================
 -- Drop and recreate the 'DataWarehouse' database
 -----Checks whether the query inside returns any rows, looks in the system view sys.databases, which contains all databases on the SQL Server instance.SELECT 1 is just a simple way to test existence
@@ -28,6 +29,7 @@ GO
 --Force everyone out of it.
 --Delete it safely.
 ==========================================================================
+*/
 IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'DataWarehouse')
 BEGIN
     ALTER DATABASE DataWarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
